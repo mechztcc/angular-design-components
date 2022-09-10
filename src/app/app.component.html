@@ -1,12 +1,16 @@
 <div class="container">
-  <h1>Acessible component</h1>
+  <h1>Accessible component</h1>
 
   <p>Welcome to the modal testing page</p>
-  <button class="button button-primary" type="button">Show modal</button>
+  <button class="button button-primary" type="button" (click)="show()">
+    Show modal
+  </button>
+</div>
 
+<ng-template #modal>
   <div class="form-field">
     <label for="firstName">First name</label>
-    <input type="text" id="firstName" />
+    <input type="text" id="firstName" [(value)]="firstName" />
   </div>
 
   <div class="form-field">
@@ -21,6 +25,12 @@
 
   <div class="button-group">
     <button class="button button-primary" type="button">Submit</button>
-    <button class="button button-secondary" type="button">Cancel</button>
+    <button
+      class="button button-secondary"
+      type="button"
+      (click)="modalRef.close()"
+    >
+      Cancel
+    </button>
   </div>
-</div>
+</ng-template>
