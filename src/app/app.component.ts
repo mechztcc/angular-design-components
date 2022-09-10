@@ -1,7 +1,7 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
 import {
   ModalRef,
-  ModalService
+  ModalService,
 } from './shared/components/modal/services/modal.service';
 
 @Component({
@@ -11,6 +11,8 @@ import {
 })
 export class AppComponent {
   @ViewChild('modal') modalTemplateRef: TemplateRef<any>;
+
+  selectedTemplate: TemplateRef<any>;
 
   title = 'a11y-p2';
   firstName = 'Alberto';
