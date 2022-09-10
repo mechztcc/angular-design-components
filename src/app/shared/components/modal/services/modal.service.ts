@@ -7,7 +7,7 @@ import { ModalConfig } from '../types/modal-config.interface';
 export class ModalService {
   constructor() {}
 
-  open(config: ModalConfig) {
+  open(config: ModalConfig): ModalRef {
     console.log('open called');
     return new ModalRef();
   }
