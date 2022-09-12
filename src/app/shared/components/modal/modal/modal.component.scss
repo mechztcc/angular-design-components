@@ -1,0 +1,22 @@
+.modal-overlay {
+  z-index: 100;
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  bottom: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #53354a56;
+  border-radius: 20px;
+  .modal-content {
+    padding: 0 2rem 2rem 2rem;
+    min-width: 94%;
+    @media (min-width: 600px) {
+      min-width: 60%;
+    }
+    .modal-title {
+    }
+  }
+}
