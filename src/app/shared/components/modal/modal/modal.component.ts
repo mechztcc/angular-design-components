@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { fadeIn } from 'src/app/shared/animations/fadeIn';
+import { fade } from 'src/app/shared/animations/fade';
 import { ModalConfig } from '../types/modal-config.interface';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
-  animations: [fadeIn],
+  animations: [fade],
 })
 export class ModalComponent implements OnInit {
 
