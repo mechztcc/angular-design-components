@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fade } from 'src/app/shared/animations/fade';
+import { ModalRef } from '../models/modal-ref';
 import { ModalConfig } from '../types/modal-config.interface';
 
 @Component({
@@ -10,7 +11,7 @@ import { ModalConfig } from '../types/modal-config.interface';
 })
 export class ModalComponent implements OnInit {
 
-
+  modalRef: ModalRef;
   config: ModalConfig;
   constructor() {}
 

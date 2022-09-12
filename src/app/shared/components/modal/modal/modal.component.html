@@ -1,7 +1,7 @@
-<div class="modal-overlay">
-  <div [@fade]="true" class="modal-content">
+<div class="modal-overlay" (click)="modalRef.close()">
+  <div [@fade]="true" class="modal-content" (click)="$event.stopPropagation()">
     <h1 class="modal-title">{{ config.title }}</h1>
-    <hr>
+    <hr />
     <ng-container *ngTemplateOutlet="config.templateRef"></ng-container>
   </div>
 </div>
