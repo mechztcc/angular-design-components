@@ -45,7 +45,6 @@ export class FocusTrapDirective implements AfterViewInit {
     } else if (document.activeElement === this.lastFocusableElement) {
       this.firstFocusableElement.focus();
       event.preventDefault();
-    } else if(event.shiftKey && document.activeElement === this.lastFocusableElement) {
     }
   }
 }
