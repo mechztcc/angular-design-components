@@ -24,15 +24,17 @@ export class AppComponent implements OnInit {
     this.form = this.fb.group({
       firstName: ['Alberto', Validators.required],
       surName: ['Paiva', Validators.required],
-      age: [, Validators.required]
-    })
+      age: [, Validators.required],
+    });
   }
 
   submit() {
+    if (this.form.invalid) {
+      return;
+    }
     console.log(this.form.controls);
-    this.modalRef.close()
+    this.modalRef.close();
   }
-
 
   show(): void {
     this.modalRef = this.modalService.open({
